@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson JS1</title>
+</head>
+<body>
+<h1>Java Script</h1>
+<script>
+    let animal = "cat";
+    let num = 10;
+    const PI = 3.14; // init const
+    // coment
+    console.log(animal + " say: helloworld! " + num + " times");
+    // let arr= Array(12,15,16,10);
+    let arr = [12, 15, 19];
+    arr.length = 100;
+    arr[200] = 50;
+    console.log(arr[2]);
+
+    console.log(arr.length);
+    let str = "string " + ' and ' + "string";
+
+    console.log(str);
+    var res = 1 / 2;
+    console.log(res);
+    console.log(typeof (animal));
+    if (!isFinite(res)) {
+        console.log("its infinity number");
+    } else {
+        console.log(res);
+
+    }
+
+    //    преобразование типов
+    num = "100";
+    num = Number(num);
+    console.log(typeof (num));
+
+    //   cicles
+    arr1 = [1, 2, true, Infinity, "hello"]
+    for (let i = 0; i < arr1.length; i++) {
+        console.log(arr1[i]);
+    }
+    for (let i in arr1) {
+        console.log(i);
+    }
+
+    document.write("<h1>Hello world</h1> ");
+    alert("Hello its alleerrrtttt!!!!");
+    let answer = confirm("you want drink");
+    if (answer) ? alert("you drink"): alert("you dont drink");
+
+
+</script>
+</body>
+</html>

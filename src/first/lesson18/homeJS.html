@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*   Компьютер загадывает число в диапазоне от 1 до 100.
+       Это число должно быть угадано методом постепенных попыток. Попытка состоит из предлагаемого числа,
+           выбранного вами, и ответ компьютера.
+           Ввод данных пользователем производится через функцию prompt, подсказка компьютера (введенное число
+       больше загаданного пользователем или меньше) отображается через функцию alert.
+           Используя информацию из ответа компьютера, вы должны угадать число за минимальное количество ходов.
+           После того, как число было отгадано отображается alert с указанием количества попыток и загаданного
+       компьютером числа.*/
+
+    let max = 100;
+    let min = 1;
+    let randomNum = Math.floor(Math.random() * (max - min + 1)) + min;
+    console.log(randomNum);
+    let number = parseInt(prompt("Enter you number:"));
+    //проверка на ввод числа или отмену ввода
+    while (number == "" || number == null) {
+        alert('Ты не ввёл число!');
+        number = prompt('Для продолжения Вам нужно указать Ваше число');
+    }
+
+    let big = 0;
+    let little = 0;
+    console.log(number);
+
+    if (number == randomNum) {
+        alert("you guessed the guessed number from 1 shot");
+
+    } else {
+        while (number != randomNum) {
+            if (number < randomNum) {
+                big++;
+                alert("your number litle of hide number");
+                number = prompt("Enter you number:");
+            } else {
+                little++;
+                alert("your number big of hide number");
+                number = prompt("Enter you number:");
+            }
+        }
+        /* console.log(big);
+         console.log(little);*/
+
+        alert("you guessed the guessed number from " + (little + big) + " shot");
+    }
+
+
+</script>
+</body>
+</html>

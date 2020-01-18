@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <style>
+        html, body, .grid-container {
+            height: 100%;
+            margin: 0;
+        }
+
+        table, td, th {
+            height: 100px;
+            border: 1px solid;
+            text-align: center;
+            font-size: 20px;
+
+
+        }
+
+        thead {
+            background: #DDDDDD;
+            font-weight: bold;
+
+        }
+
+        tfoot {
+            background: #CCFFCC;
+            color: #00959F;
+            font-weight: bold;
+
+        }
+
+        .grid-container * {
+            position: relative;
+        }
+
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 0.9fr 1.7fr 0.4fr 1fr;
+            grid-template-rows: 0.2fr 1.8fr 1fr;
+            grid-template-areas: ". text . ." ". table . ." ". . . .";
+        }
+
+        .table {
+            grid-area: table;
+        }
+
+        .text {
+            grid-area: text;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+<div class="grid-container">
+    <div class="text">
+        <h1>Таблица зверушек</h1>
+    </div>
+    <div class="table">
+        <table width="950px">
+            <tr>
+                <thead>
+                <td rowspan="2"></td>
+                <td colspan="2">Средний</td>
+                <td rowspan="2">Красноглазых</td>
+                </tr>
+                <tr>
+                    <td>Размер <br></td>
+                    <td>Вес</td>
+                </thead>
+            </tr>
+            <tr>
+                <col style="background: #fff632">
+                <col group span="2">
+                <col style="background: #FFCCCC">
+                <td>Самцы</td>
+                <td>1.9</td>
+                <td>0.003 <br></td>
+                <td>40%</td>
+            </tr>
+            <tr>
+                <td>Самки</td>
+                <td>1.7</td>
+                <td>0.002</td>
+                <td>43%</td>
+            </tr>
+            <tr>
+                <tfoot>
+                <td>Среднее</td>
+                <td>1.8</td>
+                <td>0.0025</td>
+                <td>41.5%</td>
+                </tfoot>
+
+            </tr>
+        </table>
+    </div>
+
+</div>
+</body>
+</html>

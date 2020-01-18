@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lamborghini1</title>
+    <style>
+        html, body, .grid-container { height: 100%; margin: 0; }
+
+        .grid-container * {
+
+            position: relative;
+        }
+
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 0.9fr 1fr 1.1fr;
+            grid-template-rows: 0.3fr 1.7fr 1fr;
+            grid-template-areas: ". . ." ". Image ." ". list .";
+        }
+
+        .Image { grid-area: Image;
+            object-fit: cover;
+            height:auto ;
+            width:auto;
+        }
+
+        .list {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 0.4fr 1.6fr;
+            grid-template-areas: ". link-list ." ". . .";
+            grid-area: list;
+        }
+
+        .link-list { grid-area: link-list;
+            text-align: center;}
+
+    </style>
+</head>
+<body>
+<div class="grid-container">
+    <div class="Image"><img src="../../images/lamborghini/l0001.jpg" height="480" width="640"/></div>
+    <div class="list">
+        <div class="link-list"><a href="menupage.html" target="_parent">Назад к разделу</a></div>
+    </div>
+</div>
+</body>
+</html>
