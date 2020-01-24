@@ -24,13 +24,17 @@ console.log("локальная переменняа"+ a );
 this.color=color;
 this.model=model;
 this.price=price;
+        this.info = function () {//анонимная функция
+            console.log("color = " + color + " model = " + model + " price = " + price);
+        }
     }
     let audi= new Car("red", "audi100","20000$") ;
     console.log(audi);
-    Car.prototype.info1=function () {console.log("color = "+this.color+ " model= " + this.model+" price= " +this.price );
+    Car.prototype.info1=function () {console.log(" output info1 color = "+this.color+ " model= " + this.model+" price= " +this.price );
 
     }
     audi.info1();
+    audi.info();
 </script>
 </body>
 </html>
