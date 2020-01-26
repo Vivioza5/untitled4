@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hideShow</title>
+    <style>
+
+        body li:hover {
+            font-weight: 900;
+        }
+.active ul {
+    list-style-type: circle;
+}
+        .active li {
+            list-style-type: square;
+        }
+    </style>
+
+
+</head>
+<body>
+<!--почти  сделал, есть баг с тем что когда складівается список пропадает метка списка, єто скорее css,
+но и список складывается динамическиб моим методом складываются ближайшие а не вложеные ноды ну и вложеные тоже
+ну а так мини браузер создан )))  -->
+
+<ul>
+
+    <li >This PC</li>
+    <div>
+    <ul>
+        <li class=>Local Disk (C:)</li>
+        <ul>
+            <li>Programm files</li>
+            <li>Users</li>
+            <li>Windows</li>
+        </ul>
+        <li>Local Disk (D:)</li>
+        <ul>
+            <li>New Folder 1</li>
+            <li>New Folder 2</li>
+            <li>New Folder 3</li>
+        </ul>
+        <li>Local Disk (E:)</li>
+    </ul>
+    </div>
+</ul>
+<!--</div>-->
+<script src="hideShowing.js"></script>
+<!--<script src="hideElemnt.js"></script>-->
+</body>
+
+</html>
